@@ -1,0 +1,118 @@
+[
+  {
+    "icon": "fire",
+    "title": "trending"
+  },
+  {
+    "icon": "chess-rook",
+    "title": "castles"
+  },
+  {
+    "icon": "house",
+    "title": "home"
+  },
+  {
+    "icon": "umbrella-beach",
+    "title": "tropical"
+  },
+  {
+    "icon": "star",
+    "title": "whoa!"
+  },
+  {
+    "icon": "bowling-ball",
+    "title": "bowling"
+  },
+  {
+    "icon": "key",
+    "title": "new"
+  },
+  {
+    "icon": "campground",
+    "title": "campground"
+  },
+  {
+    "icon": "mug-hot",
+    "title": "espresso"
+  },
+  {
+    "icon": "water-ladder",
+    "title": "pools"
+  },
+  {
+    "icon": "wheat-awn",
+    "title": "farm"
+  },
+  {
+    "icon": "mountain",
+    "title": "mountain"
+  },
+  {
+    "icon": "person-hiking",
+    "title": "trail"
+  },
+  {
+    "icon": "cart-flatbed-suitcase",
+    "title": "valet"
+  },
+  {
+    "icon": "snowflake",
+    "title": "cold"
+  },
+  {
+    "icon": "golf-ball-tee",
+    "title": "golfing"
+  },
+  {
+    "icon": "wheelchair",
+    "title": "accessible"
+  },
+  {
+    "icon": "sailboat",
+    "title": "sailing"
+  },
+  {
+    "icon": "kitchen-set",
+    "title": "cooking"
+  },
+  {
+    "icon": "chess-board",
+    "title": "board games"
+  },
+  {
+    "icon": "gamepad",
+    "title": "gaming"
+  },
+  {
+    "icon": "hockey-puck",
+    "title": "hockey"
+  },
+  {
+    "icon": "volleyball",
+    "title": "volley court"
+  },
+  {
+    "icon": "baseball",
+    "title": "batting cage"
+  },
+  {
+    "icon": "bicycle",
+    "title": "biking"
+  },
+  {
+    "icon": "dumbbell",
+    "title": "gym"
+  },
+  {
+    "icon": "spa",
+    "title": "spa"
+  },
+  {
+    "icon": "football",
+    "title": "espn"
+  },
+  {
+    "icon": "futbol",
+    "title": "soccer"
+  }
+]

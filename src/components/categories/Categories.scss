@@ -1,0 +1,45 @@
+.Categories {
+  position: relative;
+  font-size: 1.2rem;
+  padding: 0 10rem;
+  border-bottom: 1px solid #71717133;
+  box-shadow: 0px 12px 30px -25px rgba(0 0 0 / 30%);
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 15px;
+    pointer-events: none;
+    background-image: linear-gradient(90deg, rgba(255 255 255 / 100%) 0%, rgba(255 255 255 / 100%) 7%, rgba(255 255 255 / 0%) 11%, transparent 50%, rgba(255 255 255 / 0%) 89%, rgba(255 255 255 / 100%) 93%, rgba(255 255 255 / 100%) 100%);
+    width: 100%;
+  }
+  
+  .CategoryList {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow-x: auto;
+    gap: 3rem;
+
+    
+    div {
+      padding: 1rem 0;
+    }
+    
+    h6 {
+      margin: .75rem 0 0 0;
+      font-size: .75rem;
+      padding: 0 0.5rem;
+      text-transform: capitalize;
+      white-space: nowrap;
+    }
+
+  }
+}
+
+.active {
+  border-bottom: 2px solid blue;
+}
