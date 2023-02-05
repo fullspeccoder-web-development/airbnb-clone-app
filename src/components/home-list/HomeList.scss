@@ -1,0 +1,7 @@
+.HomeList {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2.5rem 1.5rem;
+  padding: 0 5rem;
+  margin: 2rem 0;
+}

@@ -1,9 +1,29 @@
 .Categories {
   position: relative;
   font-size: 1.2rem;
-  padding: 0 10rem;
+  padding: 0 15rem;
   border-bottom: 1px solid #71717133;
   box-shadow: 0px 12px 30px -25px rgba(0 0 0 / 30%);
+
+  button {
+    position: absolute;
+    background-color: white;
+    color: black;
+    border: 1px solid #ababab;
+    border-radius: 30px;
+    padding: 0.5rem 0.75rem;
+    z-index: 2;
+
+    &:nth-child(1) {
+      top:2rem;
+      left:13rem;
+    }
+
+    &:nth-child(3) {
+      top: 2rem;
+      right:13rem;
+    }
+  }
 
   &:after {
     content: "";
@@ -13,8 +33,23 @@
     right: 0;
     bottom: 15px;
     pointer-events: none;
-    background-image: linear-gradient(90deg, rgba(255 255 255 / 100%) 0%, rgba(255 255 255 / 100%) 7%, rgba(255 255 255 / 0%) 11%, transparent 50%, rgba(255 255 255 / 0%) 89%, rgba(255 255 255 / 100%) 93%, rgba(255 255 255 / 100%) 100%);
+    background-image: linear-gradient(90deg, rgba(255 255 255 / 100%) 0%, rgba(255 255 255 / 100%) 12%, rgba(255 255 255 / 0%) 16%, transparent 50%, rgba(255 255 255 / 0%) 84%, rgba(255 255 255 / 100%) 88%, rgba(255 255 255 / 100%) 100%);
     width: 100%;
+  }
+
+  .Filters {
+    display: inline-block;
+    position: absolute;
+    top: 1.25rem;
+    right: 6rem;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 1px solid #717171;
+    z-index: 2;
+    
+    h6 {
+      margin: 0;
+    }
   }
 }
 

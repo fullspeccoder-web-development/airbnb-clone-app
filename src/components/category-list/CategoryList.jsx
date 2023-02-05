@@ -11,7 +11,7 @@ const CategoryList = () => {
     <div className="CategoryList">
       {CATEGORY_DATA.map((category, index) => (
         <CategoryIcon
-          key={v4}
+          key={v4()}
           isActive={`${index === 0 && "active"}`}
           category={category}
         />

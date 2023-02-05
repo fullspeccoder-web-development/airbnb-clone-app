@@ -1,0 +1,45 @@
+.HomeCard {
+  text-align: start;
+
+  img {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 15px;
+  }
+
+  div {
+    font-size: 1rem;
+    font-weight: 400;
+    
+    h5 {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5rem 0 0 0;
+      font-size: inherit;
+      font-weight: 500;
+
+      span {
+        display: flex;
+        align-items: center;
+      }
+      
+      i {
+        margin-right: 0.25rem;
+        font-size: 0.75em;
+      }
+    }
+
+    h6 {
+      margin: 0.25rem 0;
+      font-size: 0.75rem;
+      color: #717171;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    &:nth-child(3) {
+      margin: 0.7rem 0 0 0;
+      font-size: 0.9rem;
+    }
+  }
+}
