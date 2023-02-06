@@ -25,3 +25,5 @@ const Profile = () => {
 };
 
 export default Profile;
+
+// May create a Profile Context (things like notifications and such)

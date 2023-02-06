@@ -1,17 +1,27 @@
+import { useContext } from "react";
+
 import "./Categories.scss";
 
 import CategoryList from "../category-list/CategoryList";
 
+import { CategoryListContext } from "../../context/category-list.context";
+
 const Categories = () => {
+  const { outOfLeftView, outOfRightView } = useContext(CategoryListContext);
+
   return (
     <div className="Categories">
-      <button>
-        <i className="fa-solid fa-chevron-left" />
-      </button>
+      <div className={`gradient ${outOfLeftView ? "show" : "hide"}`}>
+        <button>
+          <i className="fa-solid fa-chevron-left" />
+        </button>
+      </div>
       <CategoryList />
-      <button>
-        <i className="fa-solid fa-chevron-right" />
-      </button>
+      <div className={`gradient ${outOfRightView ? "show" : "hide"}`}>
+        <button>
+          <i className="fa-solid fa-chevron-right" />
+        </button>
+      </div>
       <div className="Filters">
         <h6>
           <i className="fa-solid fa-sliders" /> Filters
