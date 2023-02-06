@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import "./CategoryList.scss";
 
@@ -23,7 +23,7 @@ const CategoryList = () => {
       {CATEGORY_DATA.map((category, index) => (
         <CategoryIcon
           key={category.id}
-          isActive={`${index === 0 && "active"}`}
+          isActive={index === 0}
           category={category}
         />
       ))}

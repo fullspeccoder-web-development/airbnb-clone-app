@@ -6,3 +6,7 @@
   overflow-x: auto;
   gap: 2.75rem;
 }
+
+.CategoryList::-webkit-scrollbar {
+  display: none;
+}

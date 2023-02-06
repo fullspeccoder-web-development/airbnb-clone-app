@@ -1,5 +1,6 @@
 import "./HomeCard.scss";
 
+import { ReactComponent as HeartSvg } from "../../assets/heart.svg";
 import { getAvailability } from "../../utilities/helpers";
 
 const HomeCard = ({ home }) => {
@@ -18,6 +19,7 @@ const HomeCard = ({ home }) => {
   return (
     <div className="HomeCard">
       <img src={images[4]} alt={title} />
+      <HeartSvg className="heart" />
       <div>
         <h5>
           {title}

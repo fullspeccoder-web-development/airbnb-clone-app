@@ -1,5 +1,14 @@
 .HomeCard {
   text-align: start;
+  position: relative;
+
+  .heart {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    stroke: white !important;
+    stroke-width: 2px;
+  }
 
   img {
     max-width: 100%;

@@ -1,3 +1,5 @@
+import { v4 } from "uuid";
+
 import "./HomeList.scss";
 
 import HomeCard from "../home-card/HomeCard";
@@ -8,7 +10,7 @@ const HomeList = () => {
   return (
     <div className="HomeList">
       {HOME_LIST.map((home) => (
-        <HomeCard key={home.id} home={home} />
+        <HomeCard key={v4()} home={home} />
       ))}
     </div>
   );
