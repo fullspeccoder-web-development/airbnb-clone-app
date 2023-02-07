@@ -6,6 +6,10 @@ import CategoryList from "../category-list/CategoryList";
 
 import { CategoryListContext } from "../../context/category-list.context";
 
+import { ReactComponent as ChevronRightSVG } from "../../assets/chevron-right.svg";
+
+import { ReactComponent as ChevronLeftSVG } from "../../assets/chevron-left.svg";
+
 const Categories = () => {
   const { outOfLeftView, outOfRightView } = useContext(CategoryListContext);
 
@@ -13,13 +17,13 @@ const Categories = () => {
     <div className="Categories">
       <div className={`gradient ${outOfLeftView ? "show" : "hide"}`}>
         <button>
-          <i className="fa-solid fa-chevron-left" />
+          <ChevronLeftSVG />
         </button>
       </div>
       <CategoryList />
       <div className={`gradient ${outOfRightView ? "show" : "hide"}`}>
         <button>
-          <i className="fa-solid fa-chevron-right" />
+          <ChevronRightSVG />
         </button>
       </div>
       <div className="Filters">

@@ -1,5 +1,7 @@
 import "./HomeCard.scss";
 
+import Carousel from "../carousel/Carousel.jsx";
+
 import { ReactComponent as HeartSvg } from "../../assets/heart.svg";
 import { getAvailability } from "../../utilities/helpers";
 
@@ -18,7 +20,7 @@ const HomeCard = ({ home }) => {
 
   return (
     <div className="HomeCard">
-      <img src={images[4]} alt={title} />
+      <Carousel images={images} />
       <HeartSvg className="heart" />
       <div>
         <h5>
