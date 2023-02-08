@@ -1,0 +1,106 @@
+.SearchBarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+
+  .SearchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.4rem;
+    border-radius: 30px;
+    border: 1px solid #c4c4c4;
+  
+    p {
+      padding: 0 1rem;
+      font-size: 0.8rem;
+  
+      &:nth-child(2) {
+        border-left: 1px solid #c4c4c4;
+        border-right: 1px solid #c4c4c4;
+      }
+  
+      &:nth-child(3) {
+        font-weight: 400;
+        color: #717171;
+      }
+    }
+
+    i {
+      font-size: 0.9rem;
+      background-color: #ff385c;
+      color: white;
+      padding: 0.5rem;
+      border-radius: 100%;
+    }
+  }
+
+  .Search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-weight: bold;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+
+      &:nth-child(2) {
+        border-radius: 30px;
+        border: 1px solid #c4c4c4;
+
+        p {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 0.05rem;
+          font-size: 0.7rem;
+          letter-spacing: 0.05rem;
+
+          span {
+            font-size: 0.75rem;
+            font-weight: 300;
+          }
+          
+          &:nth-child(1) {
+            padding-right: 1rem;
+            width: 300px;
+            border-right: 1px solid #c4c4c4;
+          }
+
+          &:nth-child(2), &:nth-child(3) {
+            padding: 0 2rem 0 1rem;
+          }
+          
+          &:nth-child(3) {
+            border-left: 1px solid #c4c4c4;
+            border-right: 1px solid #c4c4c4;
+          }
+
+          &:nth-child(4) {
+            width: 100px;
+          }
+        }
+      }
+
+      i {
+        font-size: 0.9rem;
+        background-color: #ff385c;
+        color: white;
+        padding: 1rem;
+        border-radius: 100%;
+
+      }
+    }
+    
+    .Preferences{
+      padding: 0 0.5rem 0 2rem;
+    }
+  }
+}

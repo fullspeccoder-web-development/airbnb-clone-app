@@ -1,12 +1,16 @@
-import { useState } from "react";
-import UserDropdown from "../user-dropdown/UserDropdown";
+import { useContext } from "react";
+
 import "./Profile.styles.scss";
 
+import UserDropdown from "../user-dropdown/UserDropdown";
+
+import { NavigationContext } from "../../context/navigation.context";
+
 const Profile = () => {
-  const [clicked, setClicked] = useState(false);
+  const { profileClicked, setProfileClicked } = useContext(NavigationContext);
 
   const clickHandler = () => {
-    setClicked(!clicked);
+    setProfileClicked(!profileClicked);
   };
 
   return (
@@ -18,7 +22,7 @@ const Profile = () => {
         <span className="IconContainer">
           <i className="fa-solid fa-circle-user"></i>
         </span>
-        {clicked && <UserDropdown />}
+        {profileClicked && <UserDropdown />}
       </div>
     </>
   );

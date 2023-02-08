@@ -9,63 +9,37 @@ import { ReactComponent as ChevronLeftSVG } from "../../assets/chevron-left.svg"
 
 const Carousel = ({ images }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [displayRightButton, setDisplayRightButton] = useState(false);
-  const [displayLeftButton, setDisplayLeftButton] = useState(false);
+  // Right button -> Element One
+  // Left button -> Element Two
+  const [displayButtons, setDisplayButtons] = useState([false, false]);
   const [mouseIn, setMouseIn] = useState(false);
 
   const indexChecker = () => {
-    if (activeIndex === 0) {
-      setDisplayLeftButton(false);
-      setDisplayRightButton(true);
-    }
-    if (activeIndex === images.length - 1) {
-      setDisplayLeftButton(true);
-      setDisplayRightButton(false);
-    }
+    if (activeIndex === 0) setDisplayButtons([false, true]);
+    if (activeIndex === images.length - 1) setDisplayButtons([true, false]);
 
-    if (activeIndex < images.length - 1 && activeIndex > 0) {
-      setDisplayLeftButton(true);
-      setDisplayRightButton(true);
-    }
+    if (activeIndex < images.length - 1 && activeIndex > 0)
+      setDisplayButtons([true, true]);
   };
 
   useEffect(() => {
-    if (mouseIn) {
-      indexChecker();
-    } else {
-      setDisplayLeftButton(false);
-      setDisplayRightButton(false);
-    }
+    mouseIn ? indexChecker() : setDisplayButtons([false, false]);
   }, [activeIndex]);
+
+  useEffect(() => {
+    indexChecker();
+
+    if (!mouseIn) setDisplayButtons([false, false]);
+  }, [mouseIn]);
 
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
-      setDisplayLeftButton(false);
       newIndex = 0;
     } else if (newIndex >= images.length) {
-      setDisplayRightButton(false);
       newIndex = images.length - 1;
     }
 
-    if (newIndex < images.length - 1) {
-      setDisplayRightButton(true);
-    }
-    if (newIndex > 0) {
-      setDisplayLeftButton(true);
-    }
-
     setActiveIndex(newIndex);
-  };
-
-  const mouseEnterHandler = () => {
-    setMouseIn(true);
-    indexChecker();
-  };
-
-  const mouseLeaveHandler = () => {
-    setMouseIn(false);
-    setDisplayLeftButton(false);
-    setDisplayRightButton(false);
   };
 
   return (
@@ -80,11 +54,15 @@ const Carousel = ({ images }) => {
       </div>
       <div
         className="indicators"
-        onMouseEnter={mouseEnterHandler}
-        onMouseLeave={mouseLeaveHandler}
+        onMouseEnter={() => {
+          setMouseIn(true);
+        }}
+        onMouseLeave={() => {
+          setMouseIn(false);
+        }}
       >
         <button
-          className={`${displayLeftButton ? "show" : "hide"}`}
+          className={`${displayButtons[0] ? "show" : "hide"}`}
           onClick={() => {
             updateIndex(activeIndex - 1);
           }}
@@ -99,7 +77,7 @@ const Carousel = ({ images }) => {
           })}
         </div>
         <button
-          className={`${displayRightButton ? "show" : "hide"}`}
+          className={`${displayButtons[1] ? "show" : "hide"}`}
           onClick={() => {
             updateIndex(activeIndex + 1);
           }}

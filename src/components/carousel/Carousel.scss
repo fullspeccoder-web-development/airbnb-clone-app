@@ -31,6 +31,7 @@
       border: 1px solid #717171;
       padding: 0.5rem;
       top: 10rem;
+      cursor: pointer;
 
       &:nth-child(1) {
         left: 0rem;
@@ -63,12 +64,14 @@
   button {
 
     animation: fadein 1s ease-in 0s 1 forwards;
+    cursor: pointer;
   }
 }
 
 .hide {
   // display: none !important;
   animation: fadeout 0.5s ease-in 0s 1 forwards;
+  cursor: auto !important;
 
 }
 
