@@ -5,8 +5,7 @@ import "./SearchNav.styles.scss";
 import { NavigationContext } from "../../context/navigation.context";
 
 const SearchNav = () => {
-  const { searchNavClicked, setSearchNavClicked } =
-    useContext(NavigationContext);
+  const { searchNavClicked, toggleSearchNav } = useContext(NavigationContext);
 
   return (
     <div className="SearchBarContainer">
@@ -14,7 +13,7 @@ const SearchNav = () => {
         <div
           className="SearchBar"
           onClick={() => {
-            setSearchNavClicked(!searchNavClicked);
+            toggleSearchNav(!searchNavClicked);
           }}
         >
           <p>Anywhere</p>

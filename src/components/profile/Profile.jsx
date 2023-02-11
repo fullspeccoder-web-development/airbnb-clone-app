@@ -7,10 +7,10 @@ import UserDropdown from "../user-dropdown/UserDropdown";
 import { NavigationContext } from "../../context/navigation.context";
 
 const Profile = () => {
-  const { profileClicked, setProfileClicked } = useContext(NavigationContext);
+  const { profileClicked, toggleProfile } = useContext(NavigationContext);
 
   const clickHandler = () => {
-    setProfileClicked(!profileClicked);
+    toggleProfile(!profileClicked);
   };
 
   return (

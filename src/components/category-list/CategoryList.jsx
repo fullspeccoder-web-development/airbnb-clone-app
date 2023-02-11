@@ -8,14 +8,18 @@ import CATEGORY_DATA from "../../categories.json";
 import { CategoryListContext } from "../../context/category-list.context";
 
 const CategoryList = () => {
-  const { setOutOfLeftView, setOutOfRightView } =
+  const { toggleOutOfLeftView, toggleOutOfRightView } =
     useContext(CategoryListContext);
 
   const scrollHandler = (evt) => {
     const scrollDistance = evt.target.scrollLeft;
 
-    scrollDistance > 15 ? setOutOfLeftView(true) : setOutOfLeftView(false);
-    scrollDistance < 4737 ? setOutOfRightView(true) : setOutOfRightView(false);
+    scrollDistance > 15
+      ? toggleOutOfLeftView(true)
+      : toggleOutOfLeftView(false);
+    scrollDistance < 4737
+      ? toggleOutOfRightView(true)
+      : toggleOutOfRightView(false);
   };
 
   return (

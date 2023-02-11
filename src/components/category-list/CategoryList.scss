@@ -10,3 +10,10 @@
 .CategoryList::-webkit-scrollbar {
   display: none;
 }
+
+@media (max-width: 430) {
+  .CategoryList {
+    width: 100%;
+    gap: 2rem;
+  }
+}
