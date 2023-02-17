@@ -1,16 +1,18 @@
-import { useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import "./Profile.styles.scss";
 
 import UserDropdown from "../user-dropdown/UserDropdown";
 
-import { NavigationContext } from "../../context/navigation.context";
+import { selectProfileClicked } from "../../store/navigation/navigation.selectors";
+import { toggleProfile } from "../../store/navigation/navigation.action";
 
 const Profile = () => {
-  const { profileClicked, toggleProfile } = useContext(NavigationContext);
+  const dispatch = useDispatch();
+  const profileClicked = useSelector(selectProfileClicked);
 
   const clickHandler = () => {
-    toggleProfile(!profileClicked);
+    dispatch(toggleProfile(!profileClicked));
   };
 
   return (

@@ -1,11 +1,14 @@
-import { useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { selectSearchNavClicked } from "../../store/navigation/navigation.selectors";
+import { toggleSearchNav } from "../../store/navigation/navigation.action";
 
 import "./SearchNav.styles.scss";
 
-import { NavigationContext } from "../../context/navigation.context";
-
 const SearchNav = () => {
-  const { searchNavClicked, toggleSearchNav } = useContext(NavigationContext);
+  // const { searchNavClicked, toggleSearchNav } = useContext(NavigationContext);
+  const dispatch = useDispatch();
+  const searchNavClicked = useSelector(selectSearchNavClicked);
 
   return (
     <div className="SearchBarContainer">
@@ -13,7 +16,7 @@ const SearchNav = () => {
         <div
           className="SearchBar"
           onClick={() => {
-            toggleSearchNav(!searchNavClicked);
+            dispatch(toggleSearchNav(!searchNavClicked));
           }}
         >
           <p>Anywhere</p>
