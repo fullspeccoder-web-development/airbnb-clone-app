@@ -6,17 +6,21 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { NavigationProvider } from "./context/navigation.context";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <CategoryListProvider>
+    <Provider store={store}>
+      <BrowserRouter>
+        {/* <CategoryListProvider> */}
         <NavigationProvider>
           <App />
         </NavigationProvider>
-      </CategoryListProvider>
-    </BrowserRouter>
+        {/* </CategoryListProvider> */}
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

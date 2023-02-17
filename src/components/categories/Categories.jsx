@@ -1,17 +1,19 @@
-import { useContext } from "react";
-
 import "./Categories.scss";
 
 import CategoryList from "../category-list/CategoryList";
 
-import { CategoryListContext } from "../../context/category-list.context";
-
 import { ReactComponent as ChevronRightSVG } from "../../assets/chevron-right.svg";
 
 import { ReactComponent as ChevronLeftSVG } from "../../assets/chevron-left.svg";
+import { useSelector } from "react-redux";
+import {
+  selectLeftView,
+  selectRightView,
+} from "../../store/categories/categories.selector";
 
 const Categories = () => {
-  const { outOfLeftView, outOfRightView } = useContext(CategoryListContext);
+  const outOfLeftView = useSelector(selectLeftView);
+  const outOfRightView = useSelector(selectRightView);
 
   return (
     <div className="Categories">

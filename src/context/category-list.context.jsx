@@ -32,8 +32,6 @@ const categoryReducer = (state, action) => {
 };
 
 export const CategoryListProvider = ({ children }) => {
-  // const [outOfLeftView, setOutOfLeftView] = useState(false);
-  // const [outOfRightView, setOutOfRightView] = useState(true);
   const [state, dispatch] = useReducer(categoryReducer, INTIAL_STATE);
   const { outOfLeftView, outOfRightView } = state;
 

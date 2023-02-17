@@ -5,21 +5,24 @@ import "./CategoryList.scss";
 import CategoryIcon from "../category-icon/CategoryIcon";
 
 import CATEGORY_DATA from "../../categories.json";
-import { CategoryListContext } from "../../context/category-list.context";
+import { useDispatch } from "react-redux";
+import {
+  setOutOfLeftView,
+  setOutOfRightView,
+} from "../../store/categories/categories.action";
 
 const CategoryList = () => {
-  const { toggleOutOfLeftView, toggleOutOfRightView } =
-    useContext(CategoryListContext);
+  const dispatch = useDispatch();
 
   const scrollHandler = (evt) => {
     const scrollDistance = evt.target.scrollLeft;
 
     scrollDistance > 15
-      ? toggleOutOfLeftView(true)
-      : toggleOutOfLeftView(false);
+      ? dispatch(setOutOfLeftView(true))
+      : dispatch(setOutOfLeftView(false));
     scrollDistance < 4737
-      ? toggleOutOfRightView(true)
-      : toggleOutOfRightView(false);
+      ? dispatch(setOutOfRightView(true))
+      : dispatch(setOutOfRightView(false));
   };
 
   return (
